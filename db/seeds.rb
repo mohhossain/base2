@@ -31,19 +31,19 @@ Reaction.create([
   { id: 3, emoji: ':smile:' }
 ])
 
-reaction_question.create([
+ReactionQuestion.create([
   { id: 1, question_id: 1, user_id: 1, reaction_id: 1 },
   { id: 2, question_id: 2, user_id: 2, reaction_id: 2 },
   { id: 3, question_id: 3, user_id: 3, reaction_id: 3 },
 ])
 
-reaction_answer.create([
+ReactionAnswer.create([
   { id: 1, answer_id: 1, user_id: 1, reaction_id: 1 },
   { id: 2, answer_id: 2, user_id: 2, reaction_id: 2 },
   { id: 3, answer_id: 3, user_id: 3, reaction_id: 3 },
 ])
 
-tags.create([
+Tag.create([
   { id: 1, name: 'ruby' },
   { id: 2, name: 'rails' },
   { id: 3, name: 'debugging' },
@@ -51,7 +51,7 @@ tags.create([
   { id: 5, name: 'postgresql' }
 ])
 
-question_tag.create([
+QuestionTag.create([
   { id: 1, question_id: 1, tag_id: 1 },
   { id: 2, question_id: 1, tag_id: 2 },
   { id: 3, question_id: 2, tag_id: 2 },
