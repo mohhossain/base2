@@ -41,3 +41,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'activestorage'
 gem 'aws-sdk-s3'
+gem 'dotenv-rails'
