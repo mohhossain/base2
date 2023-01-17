@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 2023_01_13_165009) do
     t.integer "question_id", null: false
     t.integer "tag_id", null: false
     t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: falsee
     t.index ["question_id"], name: "index_question_tags_on_question_id"
     t.index ["tag_id"], name: "index_question_tags_on_tag_id"
   end
