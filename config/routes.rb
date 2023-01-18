@@ -7,4 +7,7 @@ Rails.application.routes.draw do
   resources :questions 
   resources :answers 
   resources :reaction
+
+  post "/login", to: "auth#login"
+
 end
