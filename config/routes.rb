@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  get 'questions/index'
-  get 'questions/show'
-  get 'questions/create'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :users
   resources :questions 
@@ -9,5 +6,7 @@ Rails.application.routes.draw do
   resources :reaction
 
   post "/login", to: "auth#login"
+  get "/me", to: "users#show"
+  post "/signup", to: "users#create"
 
 end

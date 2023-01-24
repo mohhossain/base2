@@ -11,6 +11,10 @@ class UsersController < ApplicationController
         }, status: :created
     end
 
+    def show 
+            render json: {user: UsersSerializer.new(current_user)}
+    end
+
     private
 
      def user_params
