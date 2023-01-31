@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   post "/login", to: "auth#login"
   get "/me", to: "users#show"
   post "/signup", to: "users#create"
+  post "/image", to: "image#create"
 
 end

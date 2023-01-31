@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+
+
 User.create([
   { id: 1, username: 'johndoe', email: 'johndoe@example.com' },
   { id: 2, username: 'janedoe', email: 'janedoe@example.com' },

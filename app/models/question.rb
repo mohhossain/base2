@@ -5,4 +5,5 @@ class Question < ApplicationRecord
   has_many :answers
   has_many :reaction_questions
   has_many :reactions, through: :reaction_questions
+  has_many_attached :images
 end
