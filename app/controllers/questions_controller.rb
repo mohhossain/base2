@@ -7,7 +7,6 @@ class QuestionsController < ApplicationController
 
   def create
     question = Question.create!(question_params)
-    
   end
 
   private 
