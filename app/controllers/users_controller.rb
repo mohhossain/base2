@@ -3,6 +3,8 @@ class UsersController < ApplicationController
     rescue_from ActiveRecord::RecordInvalid, with: :handle_invalid_record
 
     def create 
+        puts user_params
+        puts "---------------------------------"
         user = User.create!(user_params)
         @token = encode_token(user_id: user.id)
         render json: {
