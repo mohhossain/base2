@@ -11,9 +11,9 @@
 User.destroy_all 
 Question.destroy_all
 User.create!([
-  { id: 1, username: 'johndoe', email: 'johndoe@example.com', password: '123' },
-  { id: 2, username: 'janedoe', email: 'janedoe@example.com', password: '123' },
-  { id: 3, username: 'jake', email: 'jake@example.com', password: '123' }
+  { id: 1, username: 'johndoe', name: 'John Doe', email: 'johndoe@example.com', password: '123Abcd.' },
+  { id: 2, username: 'janedoe', name: 'Jane Doe', email: 'janedoe@example.com', password: '123Abcd.' },
+  { id: 3, username: 'jakejake', name: 'Jake', email: 'jake@example.com', password: '123Abcd.' }
 ])
 
 puts "seeding users..."
@@ -70,3 +70,29 @@ QuestionTag.create([
   { id: 5, question_id: 3, tag_id: 4 },
   { id: 6, question_id: 3, tag_id: 5 }
 ])
+
+
+# db/seeds.rb
+
+# Technical skills
+skills = [
+  { name: "Ruby" },
+  { name: "Rails" },
+  { name: "JavaScript" },
+  { name: "React" },
+  { name: "PostgreSQL" }
+]
+
+Skill.create!(skills)
+
+# User skills
+user_skills = [
+  { user_id: 1, skill_id: 1 },
+  { user_id: 1, skill_id: 2 },
+  { user_id: 2, skill_id: 2 },
+  { user_id: 2, skill_id: 3 },
+  { user_id: 2, skill_id: 4 },
+  { user_id: 3, skill_id: 5 }
+]
+
+UserSkill.create!(user_skills)
