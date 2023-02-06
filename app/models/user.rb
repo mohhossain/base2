@@ -15,7 +15,7 @@ class User < ApplicationRecord
     validates :password, presence: true, length: { minimum: 8 }, format: { with: /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[[:^alnum:]])/, message: "must be 8 characters long and contain at least one number, uppercase letter, lowercase letter, and a special character" }
     # email must be unique and not blank, and must be in the correct format
     validates :email, uniqueness: true, presence: true, format: { with: URI::MailTo::EMAIL_REGEXP }
-    validates :name, presence :true
+    validates :name, presence: :true
     # validate :profile_picture, presence: :false
 
 end
