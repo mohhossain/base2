@@ -10,7 +10,7 @@ rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
             @token = encode_token(user_id: user.id)
             render json: {user: UsersSerializer.new(user), token: @token}
         else
-            render json: {error: "Username or password incorrect"}
+            render json: {errors: [ error: "Username or password incorrect"]}, status: 404
         end
     end
 
@@ -21,6 +21,6 @@ rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
     end
 
     def record_not_found(e)
-        render json: { errors: ["Invalid email or password"] }, status: :not_found
+        render json: { errors: ["Invalid email or password"] }, status: 404
     end
 end

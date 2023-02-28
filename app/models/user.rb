@@ -2,7 +2,7 @@ class User < ApplicationRecord
     has_one_attached :profile_picture
     has_many :questions
     has_many :answers
-    has_many :questions, through: :answers
+    # has_many :questions, through: :answers
     # has_many :skills, through: :user_skills
     has_many :user_skills
     has_many :skills, through: :user_skills
