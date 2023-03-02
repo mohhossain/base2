@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   post "/signup", to: "users#create"
   post "/post", to: "questions#create"
   get "/questions", to: "questions#index"
+  get "tags/:name", to: "tags#show"
 
 end
