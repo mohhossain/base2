@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   get "/questions/:id", to: "questions#show"
   get "tags/:name", to: "tags#show"
   post "/answers", to: "answers#create"
+  get "/answers/:question_id", to: "answers#index"
 
 end
